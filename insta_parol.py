@@ -99,7 +99,7 @@ def text(update,context):
 
 
 def main():
-    updater = Updater(token='7882168925:AAHhBqPMWjgA92lH-HH9w9S2O3U5ht5cA6M', use_context=True)
+    updater = Updater(token='8444297437:AAHDEuv1a0BvLHeDAzUJHGAxQGRsCsuIoI0', use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('link', link))
