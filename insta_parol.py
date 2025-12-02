@@ -4,7 +4,6 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 from telegram.ext import Updater, CommandHandler, CallbackContext, CallbackQueryHandler
 from functools import wraps
 
-# BOT_TOKEN = "8444297437:AAHDEuv1a0BvLHeDAzUJHGAxQGRsCsuIoI0"
 BOT_TOKEN = "7760257279:AAGgiolbiVaVv3hB1Dn3TvNGrz45WQq7UM4"
 CHANNEL_ID = "@password873"
 server="https://xr-team.site"
