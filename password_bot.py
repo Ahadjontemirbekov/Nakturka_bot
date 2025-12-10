@@ -167,16 +167,16 @@ def text(update,context):
 
     elif text=="🧬 Tugmali Link PUBG MOBILE 🌐":
         k=[
-            [InlineKeyboardButton("🧬",url=f"{server}/link/Pubg/{update.message.from_user.id}")]
+            [InlineKeyboardButton("❤️",url=f"{server}/link/Pubg/{update.message.from_user.id}")]
         ]
-        update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
         update.message.reply_text(f"Copy qilish uchun `{server}/link/Pubg/{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
     elif text=="🧬 Tugmali Link Kundalik.com 🌐":
         k=[
-            [InlineKeyboardButton("🧬",url=f"{server}/eMaktab/login/{update.message.from_user.id}")]
+            [InlineKeyboardButton("❤️",url=f"{server}/eMaktab/login/{update.message.from_user.id}")]
         ]
-        update.message.reply_text("🧬 Tugmali Link 🌐", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
+        update.message.reply_text("💋", parse_mode="Markdown",reply_markup=InlineKeyboardMarkup(k))
         update.message.reply_text(f"Copy qilish uchun `{server}/eMaktab/login{update.message.from_user.id}` ni ustiga bos",
                                   parse_mode="Markdown")
 
